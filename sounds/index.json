@@ -1,0 +1,122 @@
+[
+	{
+		"title": "Boing",
+		"path": "sounds/boing.wav",
+		"tags": ["circus"]
+	},
+	{
+		"title": "Bonjour",
+		"path": "sounds/bonjour.wav",
+		"tags": ["cartoons", "tv", "simpsons"]
+	},
+	{
+		"title": "Barney Burp",
+		"path": "sounds/burp.wav",
+		"tags": ["cartoons", "tv", "simpsons"]
+	},
+	{
+		"title": "Clown Honk",
+		"path": "sounds/clown-honk.wav",
+		"tags": ["circus", "musical"]
+	},
+	{
+		"title": "Homer Doh",
+		"path": "sounds/doh.wav",
+		"tags": ["cartoons", "tv", "simpsons"]
+	},
+	{
+		"title": "Homer Donuts",
+		"path": "sounds/donuts.wav",
+		"tags": ["cartoons", "tv", "simpsons"]
+	},
+	{
+		"title": "Evil Laugh",
+		"path": "sounds/evil-laugh.wav",
+		"tags": []
+	},
+	{
+		"title": "Falling Bomb",
+		"path": "sounds/falling-bomb.wav",
+		"tags": ["war"]
+	},
+	{
+		"title": "Flinstones Run",
+		"path": "sounds/flinstones-run.wav",
+		"tags": ["cartoons", "themes"]
+	},
+	{
+		"title": "Foghorn",
+		"path": "sounds/foghorn.wav",
+		"tags": ["musical"]
+	},
+	{
+		"title": "Gasps",
+		"path": "sounds/gasps.wav",
+		"tags": ["crowd"]
+	},
+	{
+		"title": "Ghostbusters",
+		"path": "sounds/ghostbusters.wav",
+		"tags": ["themes"]
+	},
+	{
+		"title": "Hi Dr. Nick",
+		"path": "sounds/hi-dr-nick.wav",
+		"tags": ["cartoons", "simpsons"]
+	},
+	{
+		"title": "Oompa Loompa theme",
+		"path": "sounds/oompa-loompa.wav",
+		"tags": ["themes"]
+	},
+	{
+		"title": "Release The Hounds",
+		"path": "sounds/release-the-hounds.wav",
+		"tags": ["cartoons", "simpsons"]
+	},
+	{
+		"title": "Repeat That",
+		"path": "sounds/repeat-that.wav",
+		"tags": []
+	},
+	{
+		"title": "Rimshot",
+		"path": "sounds/rimshot.wav",
+		"tags": ["musical"]
+	},
+	{
+		"title": "Sad Trombone",
+		"path": "sounds/sad-trombone.wav",
+		"tags": ["musical"]
+	},
+	{
+		"title": "Slide Whistle",
+		"path": "sounds/slide-whistle.wav",
+		"tags": ["musical"]
+	},
+	{
+		"title": "Tarzan Yell",
+		"path": "sounds/tarzan.wav",
+		"tags": ["soundtracks", "tv"]
+	},
+	{
+		"title": "Thats All Folks",
+		"path": "sounds/thats-all-folks.wav",
+		"tags": ["cartoons", "soundtracks", "tv"]
+	},
+	{
+		"title": "Ticking Clock",
+		"path": "sounds/ticking.wav",
+		"tags": ["quiz"]
+	},
+	{
+		"title": "Yabba Dabba Do",
+		"path": "sounds/yabba-dabba-do.wav",
+		"tags": ["cartoons", "flinstones"]
+	},
+	{
+		"title": "Yakety Sax",
+		"path": "sounds/yakety-sax.wav",
+		"tags": ["soundtracks", "tv"]
+	}
+]
