@@ -2,10 +2,7 @@ var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
 var rimraf = require('rimraf');
 
-gulp.task('default', ['build']);
-gulp.task('build', ['js', 'css']);
-
-gulp.task('gh-pages', ['build'], function() {
+gulp.task('gh-pages', function() {
 	rimraf.sync('./gh-pages');
 
 	return gulp.src([
@@ -14,6 +11,7 @@ gulp.task('gh-pages', ['build'], function() {
 		'./app.js',
 		'./index.html',
 		'./style.css',
+		'./node_modules/lodash/lodash.min.js',
 		'./node_modules/angular/angular.min.js',
 		'./node_modules/@momsfriendlydevco/angular-bs-tooltip/dist/angular-bs-tooltip.min.js',
 		'./node_modules/bootstrap/dist/css/bootstrap.min.css',
@@ -24,6 +22,7 @@ gulp.task('gh-pages', ['build'], function() {
 		'./node_modules/font-awesome/fonts/fontawesome-webfont.woff2',
 		'./node_modules/jquery/dist/jquery.min.js',
 		'./node_modules/angular-audio/app/angular.audio.js',
+		'./sounds/**/*',
 	], {base: __dirname})
 		.pipe(ghPages({
 			cacheDir: 'gh-pages',

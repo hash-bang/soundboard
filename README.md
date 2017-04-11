@@ -2,7 +2,7 @@ Soundboard
 ==========
 Simple soundboard containing pre-baked sound-fx.
 
-[Live Version](SOMEWHERE)
+[Live Version](http://hash-bang.github.io/soundboard)
 
 
 Adding sounds
