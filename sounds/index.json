@@ -5,6 +5,36 @@
 		"tags": ["circus"]
 	},
 	{
+		"title": "Bomb 1",
+		"path": "sounds/bomb1.wav",
+		"tags": ["war", "bomb"]
+	},
+	{
+		"title": "Bomb 2",
+		"path": "sounds/bomb2.wav",
+		"tags": ["war", "bomb"]
+	},
+	{
+		"title": "Bomb 3",
+		"path": "sounds/bomb3.wav",
+		"tags": ["war", "bomb"]
+	},
+	{
+		"title": "Bomb 4",
+		"path": "sounds/bomb4.wav",
+		"tags": ["war", "bomb"]
+	},
+	{
+		"title": "Bomb 5",
+		"path": "sounds/bomb5.wav",
+		"tags": ["war", "bomb"]
+	},
+	{
+		"title": "Bomb 6",
+		"path": "sounds/bomb6.wav",
+		"tags": ["war", "bomb"]
+	},
+	{
 		"title": "Bonjour",
 		"path": "sounds/bonjour.wav",
 		"tags": ["cartoons", "tv", "simpsons"]
@@ -18,6 +48,16 @@
 		"title": "Clown Honk",
 		"path": "sounds/clown-honk.wav",
 		"tags": ["circus", "musical"]
+	},
+	{
+		"title": "Cheers",
+		"path": "sounds/cheers.wav",
+		"tags": ["crowd"]
+	},
+	{
+		"title": "Cuckoo Clock",
+		"path": "sounds/cuckoo-clock.wav",
+		"tags": []
 	},
 	{
 		"title": "Homer Doh",
@@ -37,7 +77,7 @@
 	{
 		"title": "Falling Bomb",
 		"path": "sounds/falling-bomb.wav",
-		"tags": ["war"]
+		"tags": ["war", "bomb"]
 	},
 	{
 		"title": "Flinstones Run",
@@ -60,9 +100,34 @@
 		"tags": ["themes"]
 	},
 	{
+		"title": "Gunshot 1",
+		"path": "sounds/gunshot1.wav",
+		"tags": ["war", "gun"]
+	},
+	{
+		"title": "Gunshot 2",
+		"path": "sounds/gunshot2.wav",
+		"tags": ["war", "gun"]
+	},
+	{
+		"title": "Gunshot 3",
+		"path": "sounds/gunshot3.wav",
+		"tags": ["war", "gun"]
+	},
+	{
+		"title": "Gunshot 4",
+		"path": "sounds/gunshot4.wav",
+		"tags": ["war", "gun"]
+	},
+	{
 		"title": "Hi Dr. Nick",
 		"path": "sounds/hi-dr-nick.wav",
 		"tags": ["cartoons", "simpsons"]
+	},
+	{
+		"title": "Machine Gun",
+		"path": "sounds/machine-gun.wav",
+		"tags": ["war", "gun"]
 	},
 	{
 		"title": "Oompa Loompa theme",
@@ -88,6 +153,26 @@
 		"title": "Sad Trombone",
 		"path": "sounds/sad-trombone.wav",
 		"tags": ["musical"]
+	},
+	{
+		"title": "Shotgun 1",
+		"path": "sounds/shotgun1.wav",
+		"tags": ["war", "gun"]
+	},
+	{
+		"title": "Shotgun 2",
+		"path": "sounds/shotgun2.wav",
+		"tags": ["war", "gun"]
+	},
+	{
+		"title": "Shotgun 3",
+		"path": "sounds/shotgun3.wav",
+		"tags": ["war", "gun"]
+	},
+	{
+		"title": "Shotgun Reload",
+		"path": "sounds/shotgun-reload.wav",
+		"tags": ["war", "gun"]
 	},
 	{
 		"title": "Slide Whistle",
