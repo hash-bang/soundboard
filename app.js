@@ -16,6 +16,7 @@ angular.module('app', ['angular-bs-tooltip', 'ngAudio'])
 			$scope.loading = true;
 			$http.get('sounds/index.json')
 				.then(data => $scope.sounds = data.data.map(a => {
+					a.show = true;
 					a.audio = ngAudio.load(a.path);
 					a.play = ()=> {
 						if (!a.isPlaying) {
@@ -36,11 +37,37 @@ angular.module('app', ['angular-bs-tooltip', 'ngAudio'])
 							$interval.cancel(a.audioWatch);
 						}
 					};
-					console.log('SOUND', a.$audio);
 					return a;
 				}))
 				.finally(()=> $scope.loading =false);
 		};
+		// }}}
+
+		// Categories {{{
+		$scope.showCategories = true;
+		$scope.categories;
+		$scope.toggleCategories = ()=> $scope.showCategories = !$scope.showCategories;
+
+		$scope.$watch('sounds', ()=> {
+			if (!$scope.sounds) return; // Not yet loaded
+			$scope.categories = _($scope.sounds)
+				.map('tags')
+				.flatten()
+				.sort()
+				.uniq()
+				.map(i => ({
+					id: i,
+					sounds: $scope.sounds.filter(s => s.tags.includes(i)),
+				}))
+				.value();
+		});
+		// }}}
+
+		// Filtering / query {{{
+		$scope.$watchGroup(['sounds', 'query'], ()=> {
+			if (!$scope.sounds) return; // Not yet loaded
+			$scope.sounds.forEach(s => s.show = !$scope.query || s.title.toLowerCase().indexOf($scope.query.toLowerCase()) > -1);
+		});
 		// }}}
 
 		$scope.$evalAsync($scope.refresh);

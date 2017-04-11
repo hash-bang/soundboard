@@ -26,6 +26,10 @@ h1 {
 	margin-left: 10px;
 }
 
+.container + .container {
+	margin-top: 20px;
+}
+
 @media all and (max-width: 800px) {
 	#soundboard a {
 		display: block;

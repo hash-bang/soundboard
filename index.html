@@ -18,6 +18,9 @@
 	<!-- Font-awesome -->
 	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
+	<!-- Lodash -->
+	<script src="node_modules/lodash/lodash.min.js"></script>
+
 	<!-- Angular -->
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="node_modules/@momsfriendlydevco/angular-bs-tooltip/dist/angular-bs-tooltip.min.js"></script>
@@ -30,7 +33,6 @@
 <body ng-app="app" ng-controller="soundboardCtrl">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
@@ -41,10 +43,10 @@
 				<a class="navbar-brand">Soundboard</a>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li ng-class="playing > 0 && 'active'"><a ng-click="stopAll()"><i class="fa fa-stop"></i> Stop All</a></li>
+					<li><a ng-click="toggleCategories()"><i class="fa fa-fw" ng-class="showCategories ? 'fa-check-square-o' : 'fa-square-o'"></i> Categories</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">
 					<div class="form-group">
@@ -66,9 +68,19 @@
 			</h3>
 		</div>
 
-		<a ng-repeat="sound in sounds track by sound.path" ng-click="sound.play()" class="btn btn-lg" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
-			{{sound.title}}
-		</a>
+		<div ng-if="showCategories">
+			<div ng-repeat="category in categories track by category.id" class="container">
+				<legend>{{category.id}}</legend>
+				<a ng-repeat="sound in category.sounds | filter:{show:true} track by sound.path" ng-click="sound.play()" class="btn btn-lg" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
+					{{sound.title}}
+				</a>
+			</div>
+		</div>
+		<div ng-if="!showCategories">
+			<a ng-repeat="sound in sounds | filter:{show:true} track by sound.path" ng-click="sound.play()" class="btn btn-lg" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
+				{{sound.title}}
+			</a>
+		</div>
 	</div>
 </body>
 </html>
