@@ -165,11 +165,6 @@
 		"tags": ["war", "gun"]
 	},
 	{
-		"title": "Shotgun 3",
-		"path": "sounds/shotgun3.wav",
-		"tags": ["war", "gun"]
-	},
-	{
 		"title": "Shotgun Reload",
 		"path": "sounds/shotgun-reload.wav",
 		"tags": ["war", "gun"]
