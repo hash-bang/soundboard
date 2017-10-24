@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/hash-bang/soundboard#readme",
   "dependencies": {
-    "@momsfriendlydevco/angular-bs-tooltip": "^1.2.3",
-    "angular": "^1.6.4",
+    "@momsfriendlydevco/angular-bs-tooltip": "^1.2.4",
+    "angular": "^1.6.6",
     "angular-audio": "^1.7.3",
     "bootstrap": "^3.3.7",
-    "express": "^4.15.2",
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4"
@@ -33,6 +33,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-gh-pages": "^0.5.4",
-    "rimraf": "^2.6.1"
+    "gulp-nodemon": "^2.2.1",
+    "rimraf": "^2.6.2"
   }
 }

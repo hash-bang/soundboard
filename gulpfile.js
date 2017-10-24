@@ -1,6 +1,20 @@
 var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
+var nodemon = require('gulp-nodemon');
 var rimraf = require('rimraf');
+
+gulp.task('serve', ['build'], function() {
+	var monitor = nodemon({
+		script: './server.js',
+		ext: 'js css',
+	})
+		.on('start', function() {
+			console.log('Server started');
+		})
+		.on('restart', function() {
+			console.log('Server restarted');
+		});
+});
 
 gulp.task('gh-pages', function() {
 	rimraf.sync('./gh-pages');
