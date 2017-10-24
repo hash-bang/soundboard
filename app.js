@@ -1,5 +1,6 @@
 angular.module('app', ['angular-bs-tooltip', 'ngAudio'])
 	.controller('soundboardCtrl', function($interval, $http, $scope, ngAudio) {
+
 		// Playing items {{{
 		$scope.playing = 0;
 		$scope.stopAll = ()=> {

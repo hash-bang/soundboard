@@ -3,7 +3,9 @@ var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var rimraf = require('rimraf');
 
-gulp.task('serve', ['build'], function() {
+gulp.task('default', ['serve']);
+
+gulp.task('serve', function() {
 	var monitor = nodemon({
 		script: './server.js',
 		ext: 'js css',

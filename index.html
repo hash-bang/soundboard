@@ -69,17 +69,25 @@
 		</div>
 
 		<div ng-if="showCategories">
-			<div ng-repeat="category in categories track by category.id" class="container">
+			<div ng-repeat="category in categories track by category.id" class="container-fluid">
 				<legend>{{category.id}}</legend>
-				<a ng-repeat="sound in category.sounds | filter:{show:true} track by sound.path" ng-click="sound.play()" class="btn btn-lg" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
-					{{sound.title}}
-				</a>
+				<div class="row">
+					<div ng-repeat="sound in category.sounds | filter:{show:true} track by sound.path" class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+						<a ng-click="sound.play()" class="btn btn-lg btn-block" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
+							{{sound.title}}
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div ng-if="!showCategories">
-			<a ng-repeat="sound in sounds | filter:{show:true} track by sound.path" ng-click="sound.play()" class="btn btn-lg" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
-				{{sound.title}}
-			</a>
+		<div ng-if="!showCategories" class="container-fluid">
+			<div class="row">
+				<div ng-repeat="sound in sounds | filter:{show:true} track by sound.path" class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+					<a ng-click="sound.play()" class="btn btn-lg btn-block" ng-class="sound.isPlaying ? 'btn-primary' : 'btn-default'" tooltip="Tags: {{sound.tags.join(', ')}}">
+						{{sound.title}}
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
