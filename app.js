@@ -18,7 +18,7 @@ angular.module('app', ['angular-bs-tooltip'])
 			$http.get('sounds/index.json')
 				.then(data => $scope.sounds = data.data.map(a => {
 					a.show = true;
-					a.audio = new Audio(a.path);
+					a.audio = new Audio(a.path.replace('.wav', '.mp3'));
 					a.play = ()=> {
 						if (!a.isPlaying) {
 							$scope.playing++;
