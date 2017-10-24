@@ -22,7 +22,6 @@
   "dependencies": {
     "@momsfriendlydevco/angular-bs-tooltip": "^1.2.4",
     "angular": "^1.6.6",
-    "angular-audio": "^1.7.3",
     "bootstrap": "^3.3.7",
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",

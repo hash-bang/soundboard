@@ -37,7 +37,6 @@ gulp.task('gh-pages', function() {
 		'./node_modules/font-awesome/fonts/fontawesome-webfont.woff',
 		'./node_modules/font-awesome/fonts/fontawesome-webfont.woff2',
 		'./node_modules/jquery/dist/jquery.min.js',
-		'./node_modules/angular-audio/app/angular.audio.js',
 		'./sounds/**/*',
 	], {base: __dirname})
 		.pipe(ghPages({
