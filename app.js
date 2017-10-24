@@ -1,5 +1,6 @@
-angular.module('app', ['angular-bs-tooltip', 'ngAudio'])
-	.controller('soundboardCtrl', function($interval, $http, $scope, ngAudio) {
+angular.module('app', ['angular-bs-tooltip'])
+	.controller('soundboardCtrl', function($interval, $http, $scope) {
+
 		// Playing items {{{
 		$scope.playing = 0;
 		$scope.stopAll = ()=> {
@@ -17,14 +18,14 @@ angular.module('app', ['angular-bs-tooltip', 'ngAudio'])
 			$http.get('sounds/index.json')
 				.then(data => $scope.sounds = data.data.map(a => {
 					a.show = true;
-					a.audio = ngAudio.load(a.path);
+					a.audio = new Audio(a.path.replace('.wav', '.mp3'));
 					a.play = ()=> {
 						if (!a.isPlaying) {
 							$scope.playing++;
 							a.isPlaying = true;
 							a.audio.play();
 							a.audioWatch = $interval(()=> {
-								if (a.audio.progress >= 1) {
+								if (!a.audio.paused) {
 									a.isPlaying = false;
 									$scope.playing--;
 									$interval.cancel(a.audioWatch);

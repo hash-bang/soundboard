@@ -20,20 +20,22 @@ h1 {
 #soundboard {
 	padding: 20px;
 }
+
 #soundboard a {
 	text-align: left;
+}
+
+#soundboard [class*="col-"] {
 	margin-bottom: 10px;
-	margin-left: 10px;
+}
+
+#soundboard a {
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .container + .container {
 	margin-top: 20px;
-}
-
-@media all and (max-width: 800px) {
-	#soundboard a {
-		display: block;
-	}
 }
 
 #soundboard a > span {
